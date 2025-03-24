@@ -16,7 +16,6 @@ To build the hex editor:
 
 ```bash
 fasm hex_editor.asm
-ld -o hex_editor hex_editor.o
 ```
 
 ## Usage
