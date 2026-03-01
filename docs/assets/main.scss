@@ -1,0 +1,70 @@
+---
+---
+
+@import "minima";
+
+:root {
+  --site-accent: #0b6e4f;
+  --site-accent-dark: #084c3a;
+  --site-border: #d7dfdc;
+  --site-soft: #f4f8f6;
+}
+
+.site-header {
+  border-top: 6px solid var(--site-accent);
+}
+
+.site-title,
+.site-title:visited,
+.page-link,
+.page-link:visited {
+  color: var(--site-accent-dark);
+}
+
+.page-content h1,
+.page-content h2,
+.page-content h3 {
+  color: var(--site-accent-dark);
+}
+
+.hero,
+.lang-grid,
+.topic-box,
+.note-box {
+  margin: 1.25rem 0;
+}
+
+.hero,
+.topic-box,
+.note-box,
+.lang-card {
+  border: 1px solid var(--site-border);
+  border-radius: 12px;
+  background: var(--site-soft);
+  padding: 1rem 1.1rem;
+}
+
+.lang-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.lang-card h3 {
+  margin-top: 0;
+}
+
+.lang-card a {
+  font-weight: 600;
+}
+
+.topic-list {
+  columns: 2;
+  padding-left: 1.2rem;
+}
+
+@media screen and (max-width: 640px) {
+  .topic-list {
+    columns: 1;
+  }
+}

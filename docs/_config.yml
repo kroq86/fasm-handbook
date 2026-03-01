@@ -1,0 +1,16 @@
+title: FASM Handbook
+description: FASM examples, handbook pages, and reference notes for x86_64 Linux.
+theme: minima
+markdown: kramdown
+kramdown:
+  input: GFM
+header_pages:
+  - en.md
+  - ru.md
+  - book-en.md
+  - book-ru.md
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
