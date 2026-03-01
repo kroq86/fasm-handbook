@@ -9,6 +9,8 @@ header_pages:
   - ru.md
   - book-en.md
   - book-ru.md
+  - reference-guide-full.md
+  - ai-fasm-rules.md
 defaults:
   - scope:
       path: ""

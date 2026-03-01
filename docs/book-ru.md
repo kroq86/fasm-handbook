@@ -7,6 +7,11 @@ permalink: /book-ru/
 
 Эта страница превращает текущий reference guide в формат книги для GitHub Pages.
 
+## Полные главы
+
+- [Полный Reference Guide]({{ '/reference-guide/' | relative_url }})
+- [AI FASM Rules]({{ '/ai-fasm-rules/' | relative_url }})
+
 ## 1. Структура программы
 
 ```nasm
@@ -123,4 +128,5 @@ read_loop:
 
 - [Русский обзор]({{ '/ru/' | relative_url }})
 - [English handbook]({{ '/book-en/' | relative_url }})
-- `AI_FASM_RULES.md`
+- [Полный Reference Guide]({{ '/reference-guide/' | relative_url }})
+- [AI FASM Rules]({{ '/ai-fasm-rules/' | relative_url }})

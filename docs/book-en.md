@@ -7,6 +7,11 @@ permalink: /book-en/
 
 This page adapts the repository reference into a GitHub Pages handbook format.
 
+## Full Chapters
+
+- [Full Reference Guide]({{ '/reference-guide/' | relative_url }})
+- [AI FASM Rules]({{ '/ai-fasm-rules/' | relative_url }})
+
 ## 1. Program Structure
 
 ```nasm
@@ -123,4 +128,5 @@ The repository includes compact arithmetic techniques, especially in `fib.asm`, 
 
 - [English overview]({{ '/en/' | relative_url }})
 - [Russian handbook]({{ '/book-ru/' | relative_url }})
-- `AI_FASM_RULES.md`
+- [Full Reference Guide]({{ '/reference-guide/' | relative_url }})
+- [AI FASM Rules]({{ '/ai-fasm-rules/' | relative_url }})

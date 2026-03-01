@@ -34,7 +34,8 @@ This repository collects FASM examples, wrappers, utilities, and reference mater
 
 - [English handbook]({{ '/book-en/' | relative_url }})
 - [Russian handbook]({{ '/book-ru/' | relative_url }})
-- `AI_FASM_RULES.md` for repository-specific AI coding constraints.
+- [Full Reference Guide]({{ '/reference-guide/' | relative_url }})
+- [AI FASM Rules]({{ '/ai-fasm-rules/' | relative_url }}) for repository-specific coding constraints.
 
 ## Why English First
 

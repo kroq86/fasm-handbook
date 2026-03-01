@@ -11,6 +11,8 @@ This repository now includes a `docs/` site for GitHub Pages.
 - Russian overview: `docs/ru.md`
 - English handbook: `docs/book-en.md`
 - Russian handbook: `docs/book-ru.md`
+- Full reference chapter: `docs/reference-guide-full.md`
+- AI rules chapter: `docs/ai-fasm-rules.md`
 
 To publish it on GitHub:
 

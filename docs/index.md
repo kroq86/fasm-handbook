@@ -57,6 +57,13 @@ permalink: /
 - Advanced examples with Python and C wrappers.
 - Reference notes and AI-oriented FASM coding rules.
 
+## Book Sections
+
+- [English handbook]({{ '/book-en/' | relative_url }})
+- [Русская книга]({{ '/book-ru/' | relative_url }})
+- [Full Reference Guide]({{ '/reference-guide/' | relative_url }})
+- [AI FASM Rules]({{ '/ai-fasm-rules/' | relative_url }})
+
 <div class="note-box">
   <strong>GitHub Pages setup:</strong> in repository settings, set Pages to deploy from the <code>docs/</code> folder on the default branch.
 </div>

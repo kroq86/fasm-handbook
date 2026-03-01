@@ -29,7 +29,8 @@ permalink: /ru/
 
 - [Английский handbook]({{ '/book-en/' | relative_url }})
 - [Русская книга]({{ '/book-ru/' | relative_url }})
-- `AI_FASM_RULES.md` с правилами генерации кода под этот репозиторий.
+- [Полный Reference Guide]({{ '/reference-guide/' | relative_url }})
+- [AI FASM Rules]({{ '/ai-fasm-rules/' | relative_url }}) с правилами генерации кода под этот репозиторий.
 
 ## Какая языковая схема лучше
 
