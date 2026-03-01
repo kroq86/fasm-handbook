@@ -11,6 +11,7 @@ permalink: /book-ru/
 
 - [Полный Reference Guide]({{ '/reference-guide/' | relative_url }})
 - [AI FASM Rules]({{ '/ai-fasm-rules/' | relative_url }})
+- [Каталог примеров]({{ '/examples/' | relative_url }})
 
 ## 1. Структура программы
 

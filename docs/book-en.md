@@ -11,6 +11,7 @@ This page adapts the repository reference into a GitHub Pages handbook format.
 
 - [Full Reference Guide]({{ '/reference-guide/' | relative_url }})
 - [AI FASM Rules]({{ '/ai-fasm-rules/' | relative_url }})
+- [Example catalog]({{ '/examples/' | relative_url }})
 
 ## 1. Program Structure
 

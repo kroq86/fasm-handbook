@@ -29,6 +29,8 @@ permalink: /ru/
 
 - [Английский handbook]({{ '/book-en/' | relative_url }})
 - [Русская книга]({{ '/book-ru/' | relative_url }})
+- [Каталог примеров]({{ '/examples/' | relative_url }})
+- [Карта репозитория]({{ '/repository-map/' | relative_url }})
 - [Полный Reference Guide]({{ '/reference-guide/' | relative_url }})
 - [AI FASM Rules]({{ '/ai-fasm-rules/' | relative_url }}) с правилами генерации кода под этот репозиторий.
 

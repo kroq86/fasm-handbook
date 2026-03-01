@@ -9,6 +9,8 @@ This repository now includes a `docs/` site for GitHub Pages.
 - Main landing page: `docs/index.md`
 - English overview: `docs/en.md`
 - Russian overview: `docs/ru.md`
+- Example catalog: `docs/examples.md`
+- Repository map: `docs/repository-map.md`
 - English handbook: `docs/book-en.md`
 - Russian handbook: `docs/book-ru.md`
 - Full reference chapter: `docs/reference-guide-full.md`
@@ -43,6 +45,7 @@ GitHub repository topics are set in the GitHub UI, not from files in the repo. R
 ├── cadd/
 ├── coroutines/
 ├── hex_editor/
+├── oop_game/
 ├── vec/
 ├── AI_FASM_RULES.md
 ├── FASM_REFERENCE_GUIDE.md
@@ -54,6 +57,7 @@ GitHub repository topics are set in the GitHub UI, not from files in the repo. R
 - Basic assembly examples for file I/O, arguments, and arithmetic.
 - Algorithm examples including two-sum and binary search.
 - Python and C wrapper experiments for assembly integration.
+- Advanced stateful interop examples such as `oop_game/`.
 - Reference material for learning FASM faster.
 
 ## Getting Started
@@ -77,6 +81,7 @@ chmod +x mycat
 - [AI FASM Rules](AI_FASM_RULES.md)
 - [FASM Reference Guide](FASM_REFERENCE_GUIDE.md)
 - GitHub Pages handbook in `docs/`
+- [Example catalog](docs/examples.md)
 
 ## Debugging
 

@@ -64,6 +64,11 @@ permalink: /
 - [Full Reference Guide]({{ '/reference-guide/' | relative_url }})
 - [AI FASM Rules]({{ '/ai-fasm-rules/' | relative_url }})
 
+## Explore The Repository
+
+- [Example catalog]({{ '/examples/' | relative_url }})
+- [Repository map]({{ '/repository-map/' | relative_url }})
+
 <div class="note-box">
   <strong>GitHub Pages setup:</strong> in repository settings, set Pages to deploy from the <code>docs/</code> folder on the default branch.
 </div>
