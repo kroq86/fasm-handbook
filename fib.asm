@@ -71,28 +71,32 @@ macro syscall3 number, a, b, c
 macro fib a, b {
     mov r10, a
     mov r11, b
-    mov r12, 1
+    mov r12, 0
+
+    ; Print first two numbers from the seed pair.
+    mov rdi, r10
+    call print
+    mov rdi, r11
+    call print
 
 _loop:
-    add r10, r11    ;a + b
+    lea r13, [r10 + r11]
+    mov r10, r11
+    mov r11, r13
 
     mov rdi, r11
     call print
-    mov rdi, r10
-    call print
-
-    mov r11, r10    ; new a into b
-    mov r10, r12    ; counter into a
 
     inc r12
-    cmp r12, 5
-    jle _loop
+    cmp r12, 8
+    jl _loop
 }
 
 segment readable executable
 main:
-    mov r8, 1  
-    fib r8,r8        
+    mov r8, 1
+    fib r8,r8
+    mov r8, 1
 loop_start:
     syscall3 SYS_write, STDOUT, greet_msg, greet_msg_len
     
