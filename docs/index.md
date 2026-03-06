@@ -16,13 +16,13 @@ permalink: /
     <h3>English</h3>
     <p>Best default for GitHub discovery and a wider technical audience.</p>
     <p><a href="{{ '/en/' | relative_url }}">Open English overview</a></p>
-    <p><a href="{{ '/book-en/' | relative_url }}">Open English handbook</a></p>
+    <p><a href="{{ '/book-en/' | relative_url }}">Open unified book (CPU + FASM, 12 chapters)</a></p>
   </div>
   <div class="lang-card">
     <h3>Русский</h3>
     <p>Подходит для локальной аудитории и удобного чтения книги.</p>
     <p><a href="{{ '/ru/' | relative_url }}">Открыть русский обзор</a></p>
-    <p><a href="{{ '/book-ru/' | relative_url }}">Открыть русскую книгу</a></p>
+    <p><a href="{{ '/book-ru/' | relative_url }}">Открыть единую книгу (CPU + FASM, 12 глав)</a></p>
   </div>
 </div>
 
@@ -57,17 +57,17 @@ permalink: /
 - Advanced examples with Python and C wrappers.
 - Reference notes and AI-oriented FASM coding rules.
 
-## Book Sections
+## Main Books
 
-- [English handbook]({{ '/book-en/' | relative_url }})
-- [Русская книга]({{ '/book-ru/' | relative_url }})
-- [Full Reference Guide]({{ '/reference-guide/' | relative_url }})
-- [AI FASM Rules]({{ '/ai-fasm-rules/' | relative_url }})
+- [Unified English book (CPU + FASM)]({{ '/book-en/' | relative_url }})
+- [Единая русская книга (CPU + FASM)]({{ '/book-ru/' | relative_url }})
 
 ## Explore The Repository
 
 - [Example catalog]({{ '/examples/' | relative_url }})
 - [Repository map]({{ '/repository-map/' | relative_url }})
+- [Full Reference Guide]({{ '/reference-guide/' | relative_url }})
+- [AI FASM Rules]({{ '/ai-fasm-rules/' | relative_url }})
 
 <div class="note-box">
   <strong>GitHub Pages setup:</strong> in repository settings, set Pages to deploy from the <code>docs/</code> folder on the default branch.

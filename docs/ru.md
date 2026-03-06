@@ -3,9 +3,14 @@ title: Русский Обзор
 permalink: /ru/
 ---
 
-# Репозиторий с примерами и справочником по FASM
+# Репозиторий с примерами и единой книгой CPU + FASM
 
-Здесь собраны примеры на Flat Assembler, обёртки на Python и C, а также краткая книга-справочник для x86_64 Linux.
+Здесь собраны примеры на Flat Assembler, обёртки на Python и C, а также единая книга для x86_64 Linux.
+
+## Главная книга
+
+- [Единая книга (CPU + FASM, 12 глав)]({{ '/book-ru/' | relative_url }})
+- В книге есть главы про процессор, ассемблер, интерпретатор, сопрограммы и практику.
 
 ## Что внутри
 
@@ -25,10 +30,9 @@ permalink: /ru/
 - `vec/` с векторными операциями.
 - `hex_editor/` как прикладная утилита.
 
-## Документация
+## Остальная документация
 
-- [Английский handbook]({{ '/book-en/' | relative_url }})
-- [Русская книга]({{ '/book-ru/' | relative_url }})
+- [English handbook]({{ '/book-en/' | relative_url }})
 - [Каталог примеров]({{ '/examples/' | relative_url }})
 - [Карта репозитория]({{ '/repository-map/' | relative_url }})
 - [Полный Reference Guide]({{ '/reference-guide/' | relative_url }})

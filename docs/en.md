@@ -3,9 +3,14 @@ title: English Overview
 permalink: /en/
 ---
 
-# FASM Examples and Learning Repository
+# FASM Examples and Unified CPU + FASM Handbook
 
-This repository collects FASM examples, wrappers, utilities, and reference material for x86_64 Linux.
+This repository collects FASM examples, wrappers, utilities, and a unified handbook for x86_64 Linux.
+
+## Main Book
+
+- [Unified Handbook (CPU + FASM, 12 chapters)]({{ '/book-en/' | relative_url }})
+- Includes processor fundamentals, assembly chapters, interpreter topics, coroutines, and practical reference sections.
 
 ## Structure
 
@@ -30,9 +35,8 @@ This repository collects FASM examples, wrappers, utilities, and reference mater
 - `vec/` for vector and dot product work.
 - `hex_editor/` for a practical FASM utility.
 
-## Documentation
+## Other Documentation
 
-- [English handbook]({{ '/book-en/' | relative_url }})
 - [Russian handbook]({{ '/book-ru/' | relative_url }})
 - [Example catalog]({{ '/examples/' | relative_url }})
 - [Repository map]({{ '/repository-map/' | relative_url }})
