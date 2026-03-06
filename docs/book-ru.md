@@ -2,22 +2,76 @@
 title: Книга RU
 permalink: /book-ru/
 ---
+<div class="book-shell">
+<aside class="book-sidebar" markdown="1">
+## Навигация
 
-# Единая книга: CPU + FASM + Практика (RU)
+### Крупные разделы
+- [Часть 1: CPU + ASM (12 глав)](#part-1-core)
+- [Часть 2: FASM Reference](#part-2-fasm-reference)
+- [Часть 3: Каталог примеров](#part-3-examples)
+- [Часть 4: Full Reference](#part-4-full-reference)
+- [Часть 5: AI FASM Rules](#part-5-ai-rules)
+- [Часть 6: Карта репозитория](#part-6-repo-map)
 
-Эта страница объединяет все ключевые части в одном файле.
+### CPU + ASM: главы
+- [Глава 1](#глава-1)
+- [Глава 2](#глава-2)
+- [Глава 3](#глава-3)
+- [Глава 4](#глава-4)
+- [Глава 5](#глава-5)
+- [Глава 6](#глава-6)
+- [Глава 7](#глава-7)
+- [Глава 8](#глава-8)
+- [Глава 9](#глава-9)
+- [Глава 10](#глава-10)
+- [Глава 11](#глава-11)
+- [Глава 12](#глава-12)
 
-## Содержание объединения
+### FASM: детали
+- [1. Структура программы](#ru-fasm-1-structure)
+- [2. Системные вызовы](#ru-fasm-2-syscalls)
+- [3. Работа с файлами](#ru-fasm-3-files)
+- [4. Данные и память](#ru-fasm-4-data)
+- [5. Вспомогательные макросы](#ru-fasm-5-macros)
+- [6. Соглашение по регистрам](#ru-fasm-6-registers)
+- [7. Обработка ошибок](#ru-fasm-7-errors)
+- [8. Цикл чтения](#ru-fasm-8-read-loop)
+- [9. Печать чисел](#ru-fasm-9-numbers)
+- [10. Оптимизация](#ru-fasm-10-opt)
+- [11. Отладка](#ru-fasm-11-debug)
+- [12. Связанные страницы](#ru-fasm-12-related)
+</aside>
+<section class="book-content" markdown="1">
+# Единая книга: CPU + FASM (RU)
 
-1. Основная книга (CPU + FASM)
-2. Каталог примеров
-3. Полный Reference Guide
-4. AI FASM Rules
-5. Карта репозитория
+Эта книга объединяет материалы по архитектуре процессора, ассемблеру и полный FASM-справочный блок.
+
+## Оглавление
+
+- [Часть 1: Основная книга (CPU + ASM, 12 глав)](#part-1-core)
+  - [Глава 1: Понимание работы компьютеров](#глава-1)
+  - [Глава 2: Основы CPU](#глава-2)
+  - [Глава 3: Введение в ассемблер](#глава-3)
+  - [Глава 4: Управление потоком в ассемблере](#глава-4)
+  - [Глава 5: От машинного кода к языкам высокого уровня](#глава-5)
+  - [Глава 6: Понимание выполнения программ](#глава-6)
+  - [Глава 7: Введение в Lisp](#глава-7)
+  - [Глава 8: Концепции функционального программирования](#глава-8)
+  - [Глава 9: Основы интерпретатора](#глава-9)
+  - [Глава 10: Продвинутые возможности интерпретатора](#глава-10)
+  - [Глава 11: Сопрограммы и современное программирование](#глава-11)
+  - [Глава 12: Объединяя всё вместе](#глава-12)
+- [Часть 2: FASM Reference Guide](#part-2-fasm-reference)
+- [Часть 3: Каталог примеров](#part-3-examples)
+- [Часть 4: Полный Reference Guide](#part-4-full-reference)
+- [Часть 5: AI FASM Rules](#part-5-ai-rules)
+- [Часть 6: Карта репозитория](#part-6-repo-map)
 
 ---
 
-# Часть 1: Основная книга
+<a name="part-1-core"></a>
+# Часть 1: Основная книга (CPU + ASM, 12 глав)
 
 # Создание компьютера с нуля
 ## Путешествие через вычисления, ассемблер и Lisp
@@ -3666,9 +3720,12 @@ class Project:
 
 [← Предыдущая глава](#глава-11) | [К содержанию →](#содержание)
 
+
 ---
 
-# Часть 2: Справочник FASM
+<a name="part-2-fasm-reference"></a>
+# Часть 2: FASM Reference Guide
+
 
 
 # Справочник по FASM
@@ -3681,6 +3738,7 @@ class Project:
 - [AI FASM Rules]({{ '/ai-fasm-rules/' | relative_url }})
 - [Каталог примеров]({{ '/examples/' | relative_url }})
 
+<a name="ru-fasm-1-structure"></a>
 ## 1. Структура программы
 
 ```nasm
@@ -3696,6 +3754,7 @@ segment readable writeable
 segment readable executable
 ```
 
+<a name="ru-fasm-2-syscalls"></a>
 ## 2. Системные вызовы
 
 ```nasm
@@ -3708,6 +3767,7 @@ SYS_exit  equ 60
 - В `RAX` находится номер системного вызова.
 - Аргументы идут через `RDI`, `RSI`, `RDX`, `R10`, `R8`, `R9`.
 
+<a name="ru-fasm-3-files"></a>
 ## 3. Работа с файлами
 
 ```nasm
@@ -3720,6 +3780,7 @@ syscall
 - Возврат системного вызова нужно проверять сразу.
 - Отрицательное значение означает ошибку.
 
+<a name="ru-fasm-4-data"></a>
 ## 4. Данные и память
 
 ```nasm
@@ -3733,6 +3794,7 @@ buffer rb buffer_size
 - Строки лучше держать с нулевым терминатором.
 - Буферы резервируются явно через `rb`, `rw`, `rd`, `rq`.
 
+<a name="ru-fasm-5-macros"></a>
 ## 5. Вспомогательные макросы
 
 ```nasm
@@ -3746,12 +3808,14 @@ macro funcall1 func, a
 - Макросы убирают повторяющийся код.
 - Но соглашение по регистрам всё равно нужно соблюдать вручную.
 
+<a name="ru-fasm-6-registers"></a>
 ## 6. Соглашение по регистрам
 
 - `RAX` используется для системных вызовов и возвращаемых значений.
 - `RDI`, `RSI`, `RDX`, `RCX` часто несут параметры.
 - `RAX`, `RCX`, `RDX`, `R8`-`R11` считаются volatile.
 
+<a name="ru-fasm-7-errors"></a>
 ## 7. Обработка ошибок
 
 ```nasm
@@ -3763,6 +3827,7 @@ js error_handler
 - После каждого потенциально ошибочного syscall лучше делать проверку.
 - Освобождение ресурсов удобнее держать в одном обработчике ошибок.
 
+<a name="ru-fasm-8-read-loop"></a>
 ## 8. Типовой шаблон: цикл чтения
 
 ```nasm
@@ -3777,22 +3842,26 @@ read_loop:
 - Это базовый шаблон из `mycat.asm`.
 - После него обычно идут проверка `EOF` и ветка ошибок.
 
+<a name="ru-fasm-9-numbers"></a>
 ## 9. Печать чисел
 
 В репозитории есть компактные приёмы преобразования чисел в ASCII, особенно в `fib.asm`.
 
+<a name="ru-fasm-10-opt"></a>
 ## 10. Заметки по оптимизации
 
 - По возможности держать значения в регистрах.
 - Перед `call` сохранять выравнивание стека в 16 байт.
 - Для быстрых проверок удобно использовать флаги, например `test rax, rax`.
 
+<a name="ru-fasm-11-debug"></a>
 ## 11. Отладка
 
 - Для точек останова можно вставлять `int3`.
 - `readelf -h <binary>` помогает быстро проверить ELF-заголовок и entry point.
 - Для GDB можно использовать графический frontend `gf`.
 
+<a name="ru-fasm-12-related"></a>
 ## 12. Связанные страницы
 
 - [Русский обзор]({{ '/ru/' | relative_url }})
@@ -3803,6 +3872,10 @@ read_loop:
 
 ---
 
+
+---
+
+<a name="part-3-examples"></a>
 # Часть 3: Каталог примеров
 
 # Example Catalog
@@ -3849,6 +3922,7 @@ This page is the canonical map of executable and wrapper-based examples in the r
 
 ---
 
+<a name="part-4-full-reference"></a>
 # Часть 4: Полный Reference Guide
 
 # FASM (Flat Assembler) Reference Guide
@@ -4190,6 +4264,7 @@ function_name:
 
 ---
 
+<a name="part-5-ai-rules"></a>
 # Часть 5: AI FASM Rules
 
 # FASM Code Generation Rules for AI
@@ -5332,6 +5407,7 @@ public generator__finish_current
 
 ---
 
+<a name="part-6-repo-map"></a>
 # Часть 6: Карта репозитория
 
 # Repository Map
@@ -5370,3 +5446,5 @@ The repository follows a simple split: root-level standalone examples, folder-ba
 - Normalize README files and build instructions across example folders.
 - Pull only FASM-specific material from other repositories, not unrelated Lisp or database content.
 
+</section>
+</div>

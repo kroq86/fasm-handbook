@@ -2,25 +2,79 @@
 title: Handbook EN
 permalink: /book-en/
 ---
+<div class="book-shell">
+<aside class="book-sidebar" markdown="1">
+## Navigation
 
-# Unified Book: CPU + FASM + Practice (EN)
+### Main sections
+- [Part 1: CPU + ASM (12 chapters)](#part-1-core)
+- [Part 2: FASM Reference](#part-2-fasm-reference)
+- [Part 3: Example Catalog](#part-3-examples)
+- [Part 4: Full Reference](#part-4-full-reference)
+- [Part 5: AI FASM Rules](#part-5-ai-rules)
+- [Part 6: Repository Map](#part-6-repo-map)
 
-This page combines all key parts in one file.
+### CPU + ASM chapters
+- [Chapter 1](#chapter-1)
+- [Chapter 2](#chapter-2)
+- [Chapter 3](#chapter-3)
+- [Chapter 4](#chapter-4)
+- [Chapter 5](#chapter-5)
+- [Chapter 6](#chapter-6)
+- [Chapter 7](#chapter-7)
+- [Chapter 8](#chapter-8)
+- [Chapter 9](#chapter-9)
+- [Chapter 10](#chapter-10)
+- [Chapter 11](#chapter-11)
+- [Chapter 12](#chapter-12)
 
-## Combined contents
+### FASM details
+- [1. Program Structure](#en-fasm-1-structure)
+- [2. System Calls](#en-fasm-2-syscalls)
+- [3. File Operations](#en-fasm-3-files)
+- [4. Data And Memory](#en-fasm-4-data)
+- [5. Function Helpers](#en-fasm-5-helpers)
+- [6. Register Conventions](#en-fasm-6-registers)
+- [7. Error Handling](#en-fasm-7-errors)
+- [8. Read Loop Pattern](#en-fasm-8-read-loop)
+- [9. Number Printing Tricks](#en-fasm-9-numbers)
+- [10. Optimization Notes](#en-fasm-10-opt)
+- [11. Debugging](#en-fasm-11-debug)
+- [12. Related Material](#en-fasm-12-related)
+</aside>
+<section class="book-content" markdown="1">
+# Unified Book: CPU + FASM (EN)
 
-1. Core handbook (CPU + FASM)
-2. Example catalog
-3. Full Reference Guide
-4. AI FASM Rules
-5. Repository map
+This handbook combines processor fundamentals, assembly chapters, and full FASM reference material.
+
+## Table of Contents
+
+- [Part 1: Core Book (CPU + ASM, 12 chapters)](#part-1-core)
+  - [Chapter 1: Understanding How Computers Work](#chapter-1)
+  - [Chapter 2: CPU Basics](#chapter-2)
+  - [Chapter 3: Introduction to Assembly](#chapter-3)
+  - [Chapter 4: Control Flow in Assembly](#chapter-4)
+  - [Chapter 5: From Machine Code to High-Level Languages](#chapter-5)
+  - [Chapter 6: Understanding Program Execution](#chapter-6)
+  - [Chapter 7: Introduction to Lisp](#chapter-7)
+  - [Chapter 8: Functional Programming Concepts](#chapter-8)
+  - [Chapter 9: Interpreter Fundamentals](#chapter-9)
+  - [Chapter 10: Advanced Interpreter Features](#chapter-10)
+  - [Chapter 11: Coroutines and Modern Programming](#chapter-11)
+  - [Chapter 12: Bringing It All Together](#chapter-12)
+- [Part 2: FASM Reference Guide](#part-2-fasm-reference)
+- [Part 3: Example Catalog](#part-3-examples)
+- [Part 4: Full Reference Guide](#part-4-full-reference)
+- [Part 5: AI FASM Rules](#part-5-ai-rules)
+- [Part 6: Repository Map](#part-6-repo-map)
 
 ---
 
-# Part 1: Core Handbook
+<a name="part-1-core"></a>
+# Part 1: Core Book (CPU + ASM, 12 chapters)
 
-# Unified CPU + FASM Handbook (EN)
-## Building a Computer from First Principles and Practical FASM
+# Building a Computer from First Principles
+## A Journey Through Computing, Assembly, and Lisp
 
 *An educational guide based on practical implementation*
 
@@ -46,8 +100,6 @@ This page combines all key parts in one file.
 ### Part 6: Advanced Concepts
 - [Chapter 11: Coroutines and Modern Programming](#chapter-11)
 - [Chapter 12: Bringing It All Together](#chapter-12)
-### Part 7: FASM Handbook
-- [FASM Reference Guide](#fasm-reference-guide)
 
 ---
 
@@ -3397,9 +3449,13 @@ class BuildSystem:
 - Language Server Protocol Specification
 
 [← Previous Chapter](#chapter-11)
+
+
 ---
 
-# Part 2: FASM Handbook
+<a name="part-2-fasm-reference"></a>
+# Part 2: FASM Reference Guide
+
 
 
 # FASM Reference Guide
@@ -3412,6 +3468,7 @@ This page adapts the repository reference into a GitHub Pages handbook format.
 - [AI FASM Rules]({{ '/ai-fasm-rules/' | relative_url }})
 - [Example catalog]({{ '/examples/' | relative_url }})
 
+<a name="en-fasm-1-structure"></a>
 ## 1. Program Structure
 
 ```nasm
@@ -3427,6 +3484,7 @@ segment readable writeable
 segment readable executable
 ```
 
+<a name="en-fasm-2-syscalls"></a>
 ## 2. System Calls
 
 ```nasm
@@ -3439,6 +3497,7 @@ SYS_exit  equ 60
 - `RAX` holds the syscall number.
 - `RDI`, `RSI`, `RDX`, `R10`, `R8`, `R9` hold arguments in that order.
 
+<a name="en-fasm-3-files"></a>
 ## 3. File Operations
 
 ```nasm
@@ -3451,6 +3510,7 @@ syscall
 - Check syscall return values immediately.
 - Negative values indicate an error on Linux.
 
+<a name="en-fasm-4-data"></a>
 ## 4. Data And Memory
 
 ```nasm
@@ -3464,6 +3524,7 @@ buffer rb buffer_size
 - Keep strings zero-terminated.
 - Reserve buffers explicitly with `rb`, `rw`, `rd`, or `rq`.
 
+<a name="en-fasm-5-helpers"></a>
 ## 5. Function Helpers
 
 ```nasm
@@ -3477,12 +3538,14 @@ macro funcall1 func, a
 - Wrapper macros reduce boilerplate.
 - Still preserve registers carefully when building reusable routines.
 
+<a name="en-fasm-6-registers"></a>
 ## 6. Register Conventions
 
 - `RAX` is used for syscall numbers and return values.
 - `RDI`, `RSI`, `RDX`, `RCX` commonly carry parameters.
 - `RAX`, `RCX`, `RDX`, `R8` to `R11` should be treated as volatile.
 
+<a name="en-fasm-7-errors"></a>
 ## 7. Error Handling
 
 ```nasm
@@ -3494,6 +3557,7 @@ js error_handler
 - Test after every syscall that can fail.
 - Centralize cleanup in one error path when possible.
 
+<a name="en-fasm-8-read-loop"></a>
 ## 8. Common Pattern: Read Loop
 
 ```nasm
@@ -3508,22 +3572,26 @@ read_loop:
 - This is the core pattern behind `mycat.asm`.
 - Follow it with zero-byte EOF handling and error checks.
 
+<a name="en-fasm-9-numbers"></a>
 ## 9. Number Printing Tricks
 
 The repository includes compact arithmetic techniques, especially in `fib.asm`, for converting integers into ASCII digits efficiently.
 
+<a name="en-fasm-10-opt"></a>
 ## 10. Optimization Notes
 
 - Prefer registers over memory traffic.
 - Keep stack alignment at 16 bytes before calls.
 - Use simple flag-based tests such as `test rax, rax` when appropriate.
 
+<a name="en-fasm-11-debug"></a>
 ## 11. Debugging
 
 - Insert breakpoints with `int3` when needed.
 - Use `readelf -h <binary>` to inspect ELF entry details.
 - A graphical frontend such as `gf` can make GDB easier to navigate.
 
+<a name="en-fasm-12-related"></a>
 ## 12. Related Material
 
 - [English overview]({{ '/en/' | relative_url }})
@@ -3534,6 +3602,10 @@ The repository includes compact arithmetic techniques, especially in `fib.asm`, 
 
 ---
 
+
+---
+
+<a name="part-3-examples"></a>
 # Part 3: Example Catalog
 
 # Example Catalog
@@ -3580,6 +3652,7 @@ This page is the canonical map of executable and wrapper-based examples in the r
 
 ---
 
+<a name="part-4-full-reference"></a>
 # Part 4: Full Reference Guide
 
 # FASM (Flat Assembler) Reference Guide
@@ -3921,6 +3994,7 @@ function_name:
 
 ---
 
+<a name="part-5-ai-rules"></a>
 # Part 5: AI FASM Rules
 
 # FASM Code Generation Rules for AI
@@ -5063,6 +5137,7 @@ public generator__finish_current
 
 ---
 
+<a name="part-6-repo-map"></a>
 # Part 6: Repository Map
 
 # Repository Map
@@ -5101,3 +5176,5 @@ The repository follows a simple split: root-level standalone examples, folder-ba
 - Normalize README files and build instructions across example folders.
 - Pull only FASM-specific material from other repositories, not unrelated Lisp or database content.
 
+</section>
+</div>
