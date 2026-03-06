@@ -76,6 +76,65 @@ chmod +x mycat
 ./mycat
 ```
 
+## Cross-Platform Docker Runner and REPL
+
+If you are on macOS or Windows, use Docker as a Linux backend:
+
+1. Build the image:
+
+```bash
+./fasm build-image
+```
+
+If Docker layer cache got stale, rebuild clean:
+
+```bash
+./fasm build-image --no-cache
+```
+
+If you need another FASM release:
+
+```bash
+./fasm build-image --fasm-version 1.73.34
+```
+
+2. Run an existing `.asm` file:
+
+```bash
+./fasm run fib.asm
+```
+
+3. Start interactive REPL-like mode:
+
+```bash
+./fasm repl
+```
+
+Inside REPL:
+
+- Add assembly lines to a buffer.
+- Use `:run` to compile and execute in Docker.
+- Use `:save <file>` to store the current buffer.
+- Use `:clear`, `:show`, `:quit` as needed.
+
+Notes:
+
+- Docker image is defined in `Dockerfile.fasm`.
+- REPL session files are stored in `.fasm-repl/` (ignored by git).
+- `./fasm` is a local wrapper around `tools/fasm_docker_repl.py`.
+
+## Imported From `/Users/ll/Documents/Plojure`
+
+Imported FASM files are now stored separately under `imports/`:
+
+- `imports/plojure-fasm/basic/cpu.py` (from `fasm/basic/cpu.py`)
+- `imports/plojure-fasm/advanced/oop_game/rules.mdc` (from `fasm/advanced/oop_game/rules.mdc`)
+
+Books are merged directly into:
+
+- `docs/book-en.md` (expanded with CPU + FASM material)
+- `docs/book-ru.md` (expanded with CPU + FASM material)
+
 ## Documentation
 
 - [AI FASM Rules](AI_FASM_RULES.md)

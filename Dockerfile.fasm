@@ -1,0 +1,37 @@
+FROM debian:bookworm-slim
+
+ENV DEBIAN_FRONTEND=noninteractive
+ARG FASM_VERSION=1.73.34
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        bash \
+        curl \
+        tar \
+        gcc \
+        libc6-dev \
+        binutils \
+        make \
+        ca-certificates \
+    && rm -rf /var/lib/apt/lists/* \
+    && set -eux; \
+       tmpdir="$(mktemp -d)"; \
+       archive="$tmpdir/fasm.tgz"; \
+       for url in \
+         "https://flatassembler.net/fasm-${FASM_VERSION}.tgz" \
+         "https://flatassembler.net/fasm-${FASM_VERSION}.tar.gz" \
+         "https://sourceforge.net/projects/fasm/files/fasm-${FASM_VERSION}.tgz/download" \
+         "https://sourceforge.net/projects/fasm/files/fasm-${FASM_VERSION}.tar.gz/download"; do \
+         if curl -fL --retry 3 --connect-timeout 20 "$url" -o "$archive"; then \
+           break; \
+         fi; \
+       done; \
+       test -s "$archive"; \
+       tar -xzf "$archive" -C "$tmpdir"; \
+       fasm_bin="$(find "$tmpdir" -type f \( -name fasm -o -name fasm.x64 \) | head -n1)"; \
+       test -n "$fasm_bin"; \
+       install -m 0755 "$fasm_bin" /usr/local/bin/fasm; \
+       rm -rf "$tmpdir"; \
+       /usr/local/bin/fasm 2>/dev/null || true
+
+WORKDIR /work
