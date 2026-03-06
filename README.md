@@ -123,7 +123,7 @@ Notes:
 - REPL session files are stored in `.fasm-repl/` (ignored by git).
 - `./fasm` is a local wrapper around `tools/fasm_docker_repl.py`.
 
-## Imported From `/Users/ll/Documents/Plojure`
+## Imported From
 
 Imported FASM files are now stored separately under `imports/`:
 
