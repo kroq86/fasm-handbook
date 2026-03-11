@@ -1,7 +1,13 @@
 title: FASM Handbook
 description: FASM examples, handbook pages, and reference notes for x86_64 Linux.
+url: https://kroq86.github.io
+baseurl: /fasm-handbook
 theme: minima
 markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 kramdown:
   input: GFM
 header_pages:
