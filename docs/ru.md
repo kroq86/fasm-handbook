@@ -7,6 +7,14 @@ permalink: /ru/
 
 Здесь собраны примеры на Flat Assembler, обёртки на Python и C, а также единая книга для x86_64 Linux.
 
+## Нативный FASM для macOS
+
+Этот репозиторий в первую очередь про Linux/ELF64. Для нативной работы на macOS
+есть companion-проект [fasm-mac](https://github.com/kroq86/fasm-mac): macOS
+x86_64 порт FASM с Mach-O output, macOS syscall include-файлами,
+kqueue/green-thread networking и готовыми утилитами вроде `httpmini`, `macdbg`,
+`machodoctor`, `logknife`, `fscan`, `pathsum` и `miniredis_server`.
+
 ## Главная книга
 
 - [Единая книга (CPU + FASM, 12 глав)]({{ '/book-ru/' | relative_url }})
@@ -56,4 +64,4 @@ chmod +x fib
 
 ## Рекомендуемые GitHub topics
 
-`fasm`, `flat-assembler`, `assembly`, `x86-64`, `linux`, `elf64`, `systems-programming`, `low-level-programming`, `algorithms`, `simd`
+`fasm`, `flat-assembler`, `assembly`, `x86-64`, `linux`, `elf64`, `macos`, `mach-o`, `systems-programming`, `low-level-programming`, `algorithms`, `simd`

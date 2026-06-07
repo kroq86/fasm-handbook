@@ -9,6 +9,14 @@ permalink: /
   <p>This GitHub Pages site gives the repository a cleaner entry point than a single README and keeps the handbook content browsable online.</p>
 </div>
 
+## Native macOS FASM
+
+This handbook is Linux/ELF64-first. For native macOS work, see
+[fasm-mac](https://github.com/kroq86/fasm-mac): a companion macOS x86_64 FASM
+port with Mach-O output, macOS syscall includes, kqueue/green-thread networking,
+and ready-to-run tools such as `httpmini`, `macdbg`, `machodoctor`, `logknife`,
+`fscan`, and `miniredis_server`.
+
 ## Choose Language
 
 <div class="lang-grid">
@@ -41,6 +49,8 @@ permalink: /
     <li>x86-64</li>
     <li>linux</li>
     <li>elf64</li>
+    <li>macos</li>
+    <li>mach-o</li>
     <li>systems-programming</li>
     <li>low-level-programming</li>
     <li>assembler</li>

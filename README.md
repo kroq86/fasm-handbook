@@ -2,6 +2,19 @@
 
 A collection of FASM (Flat Assembler) examples, wrappers, utilities, and handbook material for x86_64 Linux.
 
+## Native macOS Companion
+
+This handbook focuses on Linux/ELF64. If you want to build and run native FASM
+programs on macOS, see the companion project:
+
+- [fasm-mac](https://github.com/kroq86/fasm-mac) — a macOS x86_64 FASM port with
+  reusable core includes and finished tools such as `httpmini`, `macdbg`,
+  `machodoctor`, `logknife`, `fscan`, `pathsum`, and `miniredis_server`.
+
+Use this repository for learning the language and Linux syscall patterns; use
+`fasm-mac` when you want Mach-O output, macOS syscalls, kqueue sockets, and
+ready-to-run native examples.
+
 ## GitHub Pages
 
 This repository now includes a `docs/` site for GitHub Pages.
@@ -27,7 +40,7 @@ To publish it on GitHub:
 
 GitHub repository topics are set in the GitHub UI, not from files in the repo. Recommended topics for this project:
 
-`fasm`, `flat-assembler`, `assembly`, `x86-64`, `linux`, `elf64`, `systems-programming`, `low-level-programming`, `assembler`, `algorithms`, `simd`, `coroutines`
+`fasm`, `flat-assembler`, `assembly`, `x86-64`, `linux`, `elf64`, `macos`, `mach-o`, `systems-programming`, `low-level-programming`, `assembler`, `algorithms`, `simd`, `coroutines`
 
 ## Repository Structure
 

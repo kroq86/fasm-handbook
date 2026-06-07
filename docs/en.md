@@ -7,6 +7,14 @@ permalink: /en/
 
 This repository collects FASM examples, wrappers, utilities, and a unified handbook for x86_64 Linux.
 
+## Native macOS Companion
+
+This repository is Linux/ELF64-first. For native macOS FASM, use
+[fasm-mac](https://github.com/kroq86/fasm-mac), a companion macOS x86_64 port
+with Mach-O output, macOS syscall includes, kqueue/green-thread networking, and
+finished tools such as `httpmini`, `macdbg`, `machodoctor`, `logknife`,
+`fscan`, `pathsum`, and `miniredis_server`.
+
 ## Main Book
 
 - [Unified Handbook (CPU + FASM, 12 chapters)]({{ '/book-en/' | relative_url }})
@@ -63,4 +71,4 @@ chmod +x mycat
 
 ## Suggested GitHub Topics
 
-`fasm`, `flat-assembler`, `assembly`, `x86-64`, `linux`, `elf64`, `systems-programming`, `low-level-programming`, `algorithms`, `simd`
+`fasm`, `flat-assembler`, `assembly`, `x86-64`, `linux`, `elf64`, `macos`, `mach-o`, `systems-programming`, `low-level-programming`, `algorithms`, `simd`
