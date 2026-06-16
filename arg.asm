@@ -34,10 +34,10 @@ close:
     syscall    
  
 
+exit EXIT_SUCCESS
+
 error: 
     exit EXIT_FAILURE             
-
-exit EXIT_SUCCESS
 
 strlen: 
     push rcx
