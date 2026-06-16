@@ -1,51 +1,48 @@
-# FASM Examples and Learning Repository
+# FASM Handbook
 
-A collection of FASM (Flat Assembler) examples, wrappers, utilities, and handbook material for x86_64 Linux.
+A practical FASM learning repository: textbook chapters, runnable examples,
+wrapper experiments, and reference material.
 
-## Build Real macOS Tools With FASM
+## FASM From Zero
 
-This handbook is the human entry point for learning FASM: CPU basics,
-Linux/ELF64 patterns, algorithms, wrappers, and reference material. When you
-want those ideas as installable macOS developer tools, continue with the
-companion project:
+The main reader path is [FASM From Zero](docs/book/index.md): one complete
+program per chapter, line-by-line explanations, exercises, and short platform
+run notes under the same source listing.
+
+The first textbook examples live in `examples/book/`:
+
+- `01_hello.asm`
+- `02_printing_text.asm`
+- `03_exit_codes.asm`
+
+## macOS Companion
+
+When you want to run the same style of examples as installable macOS developer
+tools, use the companion project:
 
 - [fasm-mac](https://github.com/kroq86/fasm-mac) — a macOS x86_64 FASM toolchain
   and product lab with Mach-O output, reusable core includes, kqueue servers,
   Homebrew formulae, and finished tools such as `machodoctor`, `logknife`,
   `fscan`, `hexpeek`, `logbus`, `logvec`, and `macdbg`.
 
-Use this repository to learn the language and low-level patterns. Use
-`fasm-mac` when you want Mach-O output, Darwin syscalls, release checks, and
-brew-worthy native tools. The guided bridge lives in
-[`docs/fasm-mac.md`](docs/fasm-mac.md).
+Use this repository for the textbook. Use `fasm-mac` when you want Mach-O
+output, Darwin syscalls, release checks, and brew-worthy native tools.
 
 ## GitHub Pages
 
 This repository now includes a `docs/` site for GitHub Pages.
 
 - Main landing page: `docs/index.md`
+- Textbook: `docs/book/index.md`
 - English overview: `docs/en.md`
 - Russian overview: `docs/ru.md`
 - Example catalog: `docs/examples.md`
 - Repository map: `docs/repository-map.md`
 - English handbook: `docs/book-en.md`
 - Russian handbook: `docs/book-ru.md`
-- Real macOS tools route: `docs/fasm-mac.md`
+- macOS runtime notes: `docs/fasm-mac.md`
 - Full reference chapter: `docs/reference-guide-full.md`
 - AI rules chapter: `docs/ai-fasm-rules.md`
-
-To publish it on GitHub:
-
-1. Open repository `Settings`.
-2. Open `Pages`.
-3. Select `Deploy from a branch`.
-4. Choose the default branch and the `/docs` folder.
-
-## Recommended GitHub Topics
-
-GitHub repository topics are set in the GitHub UI, not from files in the repo. Recommended topics for this project:
-
-`fasm`, `flat-assembler`, `assembly`, `x86-64`, `linux`, `elf64`, `macos`, `mach-o`, `systems-programming`, `low-level-programming`, `assembler`, `algorithms`, `simd`, `coroutines`
 
 ## Repository Structure
 
@@ -62,6 +59,7 @@ GitHub repository topics are set in the GitHub UI, not from files in the repo. R
 ├── binary_search/
 ├── cadd/
 ├── coroutines/
+├── examples/book/
 ├── hex_editor/
 ├── oop_game/
 ├── vec/
@@ -73,6 +71,7 @@ GitHub repository topics are set in the GitHub UI, not from files in the repo. R
 ## Key Areas
 
 - Basic assembly examples for file I/O, arguments, and arithmetic.
+- Textbook examples with one canonical source path.
 - Algorithm examples including two-sum and binary search.
 - Python and C wrapper experiments for assembly integration.
 - Advanced stateful interop examples such as `oop_game/`.
@@ -159,8 +158,9 @@ Books are merged directly into:
 - [AI FASM Rules](AI_FASM_RULES.md)
 - [FASM Reference Guide](FASM_REFERENCE_GUIDE.md)
 - GitHub Pages handbook in `docs/`
+- [FASM From Zero](docs/book/index.md)
 - [Example catalog](docs/examples.md)
-- [Build real macOS tools with FASM](docs/fasm-mac.md)
+- [macOS runtime notes](docs/fasm-mac.md)
 
 ## Debugging
 

@@ -1,17 +1,17 @@
 ---
-title: Real macOS Tools With FASM
+title: macOS Runtime
 permalink: /fasm-mac/
 ---
 
-# Build Real macOS Tools With FASM
+# macOS Runtime
 
-This handbook teaches FASM and Linux/ELF64 patterns. The companion project
-[fasm-mac](https://github.com/kroq86/fasm-mac) shows the same low-level ideas
-as finished macOS developer tools: Mach-O output, Darwin syscalls, kqueue
-servers, reusable core includes, release checks, and Homebrew formulae.
+The main textbook is [FASM From Zero]({{ '/book/' | relative_url }}). This page
+is only the macOS runtime companion: it shows how the same style of textbook
+programs run through [fasm-mac](https://github.com/kroq86/fasm-mac).
 
-Use this page as the bridge: learn concepts here, then follow the links into
-`fasm-mac` when you want runnable macOS tools.
+The lesson source should stay single-path. When macOS differs, the textbook
+puts the difference under the program as a run note instead of duplicating the
+chapter.
 
 ## macOS FASM In 5 Minutes
 
@@ -127,14 +127,12 @@ people can install.
 
 # Реальные macOS-инструменты на FASM
 
-Этот handbook учит FASM и Linux/ELF64-паттернам. Соседний проект
-[fasm-mac](https://github.com/kroq86/fasm-mac) показывает те же низкоуровневые
-идеи как готовые macOS-инструменты: Mach-O output, Darwin syscalls,
-kqueue-серверы, переиспользуемые core includes, check scripts и Homebrew
-formulae.
+Главный учебник здесь: [FASM From Zero]({{ '/book/' | relative_url }}). Эта
+страница — только macOS runtime companion: как запускать тот же стиль учебных
+программ через [fasm-mac](https://github.com/kroq86/fasm-mac).
 
-Эта страница - мост: учить концепции здесь, а за runnable macOS-инструментами
-переходить в `fasm-mac`.
+Source в уроках должен оставаться единым. Если macOS отличается, это короткая
+run note под программой, а не отдельная глава и не второй листинг.
 
 ## macOS FASM За 5 Минут
 

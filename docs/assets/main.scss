@@ -29,23 +29,56 @@
 
 .hero,
 .lang-grid,
+.path-grid,
 .note-box {
   margin: 1.25rem 0;
 }
 
 .hero,
 .note-box,
-.lang-card {
+.lang-card,
+.path-card {
   border: 1px solid var(--site-border);
   border-radius: 12px;
   background: var(--site-soft);
   padding: 1rem 1.1rem;
 }
 
+.primary-cta {
+  display: inline-block;
+  margin-top: 0.35rem;
+  border-radius: 8px;
+  background: var(--site-accent-dark);
+  color: #fff !important;
+  font-weight: 700;
+  padding: 0.7rem 1rem;
+  text-decoration: none;
+}
+
+.primary-cta:hover {
+  text-decoration: none;
+  background: var(--site-accent);
+}
+
 .lang-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
+}
+
+.path-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 1.35fr) repeat(2, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.path-card h3 {
+  margin-top: 0;
+}
+
+.path-card-main {
+  border-color: var(--site-accent);
+  background: #eef8f3;
 }
 
 .lang-card h3 {
@@ -112,6 +145,10 @@
 }
 
 @media screen and (max-width: 980px) {
+  .path-grid {
+    grid-template-columns: 1fr;
+  }
+
   .book-shell {
     width: auto;
     margin-left: 0;

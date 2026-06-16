@@ -5,55 +5,47 @@ permalink: /
 
 <div class="hero">
   <h1>FASM Handbook</h1>
-  <p>Examples, wrappers, and reference notes for learning Flat Assembler on Linux.</p>
-  <p>This GitHub Pages site gives the repository a cleaner entry point than a single README and keeps the handbook content browsable online.</p>
+  <p>A practical textbook for learning Flat Assembler by building real command-line programs.</p>
+  <p>Start with one source file, one idea, and one runnable program. Linux and macOS notes stay under the same code instead of splitting the book in two.</p>
+  <p><a class="primary-cta" href="{{ '/book/' | relative_url }}">Start FASM From Zero</a></p>
 </div>
 
-## Build Real macOS Tools With FASM
+## What To Click First
 
-This handbook is the learning front door: CPU basics, Linux/ELF64 examples,
-algorithms, wrappers, and reference notes. When you want those ideas as
-installable macOS tools, follow the companion route into
-[fasm-mac](https://github.com/kroq86/fasm-mac): Mach-O output, Darwin syscall
-includes, kqueue servers, reusable core includes, release checks, Homebrew
-formulae, and finished tools such as `machodoctor`, `logknife`, `fscan`,
-`hexpeek`, `logbus`, `logvec`, and `macdbg`.
+Click **Start FASM From Zero**. That is the textbook. Everything else is
+supporting material.
 
-<p><a href="{{ '/fasm-mac/' | relative_url }}">Open the macOS tools route</a></p>
-
-## Choose Language
-
-<div class="lang-grid">
-  <div class="lang-card">
-    <h3>English</h3>
-    <p>Best default for GitHub discovery and a wider technical audience.</p>
-    <p><a href="{{ '/en/' | relative_url }}">Open English overview</a></p>
-    <p><a href="{{ '/book-en/' | relative_url }}">Open unified book (CPU + FASM, 12 chapters)</a></p>
+<div class="path-grid">
+  <div class="path-card path-card-main">
+    <h3>1. Learn FASM</h3>
+    <p>The main book: one complete program per chapter, line-by-line explanations, mistakes, exercises, and run notes.</p>
+    <p><a href="{{ '/book/' | relative_url }}">Open the textbook</a></p>
   </div>
-  <div class="lang-card">
-    <h3>Русский</h3>
-    <p>Подходит для локальной аудитории и удобного чтения книги.</p>
-    <p><a href="{{ '/ru/' | relative_url }}">Открыть русский обзор</a></p>
-    <p><a href="{{ '/book-ru/' | relative_url }}">Открыть единую книгу (CPU + FASM, 12 глав)</a></p>
+  <div class="path-card">
+    <h3>2. Run On macOS</h3>
+    <p>Use fasm-mac when you want the same examples to run as x86_64 Mach-O programs on macOS.</p>
+    <p><a href="{{ '/fasm-mac/' | relative_url }}">Open macOS runtime notes</a></p>
+  </div>
+  <div class="path-card">
+    <h3>3. Browse Examples</h3>
+    <p>Use the catalog after the first chapters, when you want older examples, wrappers, and app source links.</p>
+    <p><a href="{{ '/examples/' | relative_url }}">Open examples</a></p>
   </div>
 </div>
 
-## What Is In The Repository
+## Current Textbook Chapters
 
-- Core include files for Linux syscalls and shared macros.
-- Basic examples such as file I/O, arguments, Fibonacci, and two-sum.
-- Advanced examples with Python and C wrappers.
-- Reference notes and AI-oriented FASM coding rules.
+- [Preface: What This Book Is]({{ '/book/preface/' | relative_url }})
+- [Chapter 1: Hello, FASM]({{ '/book/hello-fasm/' | relative_url }})
+- [Chapter 2: Printing Text]({{ '/book/printing-text/' | relative_url }})
+- [Chapter 3: Exit Codes And Errors]({{ '/book/exit-codes-and-errors/' | relative_url }})
 
-## Main Books
+## Secondary Material
 
-- [Unified English book (CPU + FASM)]({{ '/book-en/' | relative_url }})
-- [Единая русская книга (CPU + FASM)]({{ '/book-ru/' | relative_url }})
+Older overview and reference pages are still available, but they are not the
+starting point:
 
-## Explore The Repository
-
-- [Example catalog]({{ '/examples/' | relative_url }})
-- [Build real macOS tools with FASM]({{ '/fasm-mac/' | relative_url }})
+- [Reference Guide]({{ '/reference-guide/' | relative_url }})
 - [Repository map]({{ '/repository-map/' | relative_url }})
-- [Full Reference Guide]({{ '/reference-guide/' | relative_url }})
-- [AI FASM Rules]({{ '/ai-fasm-rules/' | relative_url }})
+- [Legacy English overview]({{ '/en/' | relative_url }})
+- [Legacy Russian overview]({{ '/ru/' | relative_url }})

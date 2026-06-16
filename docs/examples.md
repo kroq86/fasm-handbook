@@ -11,6 +11,7 @@ This page is the canonical map of executable and wrapper-based examples in the r
 
 | Example | Focus | Files |
 | --- | --- | --- |
+| `examples/book/` | textbook examples with one canonical source path | `01_hello.asm`, `02_printing_text.asm`, `03_exit_codes.asm` |
 | `mycat.asm` | file reading and writing | root |
 | `arg.asm` | command-line argument handling | root |
 | `fib.asm` | integer math and output | root |
@@ -55,9 +56,10 @@ examples when you want finished macOS tools rather than isolated demos.
 
 ## Suggested Reading Order
 
-1. Start with `fib.asm`, `arg.asm`, and `mycat.asm`.
-2. Move to `binary_search/`, `add/`, and `cadd/`.
-3. Continue with `coroutines/`, `vec/`, `hex_editor/`, and `oop_game/`.
-4. Use the [macOS tools route]({{ '/fasm-mac/' | relative_url }}) to continue
+1. Start with [FASM From Zero]({{ '/book/' | relative_url }}) and `examples/book/`.
+2. Continue with `fib.asm`, `arg.asm`, and `mycat.asm`.
+3. Move to `binary_search/`, `add/`, and `cadd/`.
+4. Continue with `coroutines/`, `vec/`, `hex_editor/`, and `oop_game/`.
+5. Use the [macOS runtime notes]({{ '/fasm-mac/' | relative_url }}) to continue
    from learning examples into `fasm-mac` products.
-5. Use the handbook pages for concepts and the full reference pages for details.
+6. Use the handbook pages for concepts and the full reference pages for details.
