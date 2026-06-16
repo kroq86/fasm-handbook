@@ -13,6 +13,7 @@ kramdown:
 header_pages:
   - en.md
   - ru.md
+  - fasm-mac.md
   - examples.md
   - repository-map.md
   - book-en.md

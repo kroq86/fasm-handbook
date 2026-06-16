@@ -30,6 +30,22 @@ This page is the canonical map of executable and wrapper-based examples in the r
 | `hex_editor/` | practical binary inspection utility | `hex_editor.asm` |
 | `oop_game/` | OOP-style state model in FASM driven from Python | `game.asm`, `wrapper.c`, `game.py` |
 
+## macOS Tool Case Studies
+
+The canonical source for these apps lives in
+[`fasm-mac`](https://github.com/kroq86/fasm-mac). Use them after the Linux
+examples when you want finished macOS tools rather than isolated demos.
+
+| Tool | Focus | Source |
+| --- | --- | --- |
+| `machodoctor` | Mach-O inspection and release checks | [`fasm/apps/machodoctor.asm`](https://github.com/kroq86/fasm-mac/blob/main/fasm/apps/machodoctor.asm) |
+| `fscan` | literal search over files | [`fasm/apps/fscan.asm`](https://github.com/kroq86/fasm-mac/blob/main/fasm/apps/fscan.asm) |
+| `logknife` | structured log slicing | [`fasm/apps/logknife.asm`](https://github.com/kroq86/fasm-mac/blob/main/fasm/apps/logknife.asm) |
+| `hexpeek` | compact file hex dump | [`fasm/apps/hexpeek.asm`](https://github.com/kroq86/fasm-mac/blob/main/fasm/apps/hexpeek.asm) |
+| `logbus` | durable append-only message broker with kqueue coroutines | [`fasm/apps/logbus.asm`](https://github.com/kroq86/fasm-mac/blob/main/fasm/apps/logbus.asm) |
+| `logvec` | FASM vector math with Zig index orchestration | [`docs/logvec.md`](https://github.com/kroq86/fasm-mac/blob/main/docs/logvec.md) |
+| `macdbg` | advanced AI-native LLDB snapshot debugger | [`fasm/apps/macdbg.asm`](https://github.com/kroq86/fasm-mac/blob/main/fasm/apps/macdbg.asm) |
+
 ## Core Support Files
 
 - `common.inc` for reusable macros and helper routines.
@@ -42,4 +58,6 @@ This page is the canonical map of executable and wrapper-based examples in the r
 1. Start with `fib.asm`, `arg.asm`, and `mycat.asm`.
 2. Move to `binary_search/`, `add/`, and `cadd/`.
 3. Continue with `coroutines/`, `vec/`, `hex_editor/`, and `oop_game/`.
-4. Use the handbook pages for concepts and the full reference pages for details.
+4. Use the [macOS tools route]({{ '/fasm-mac/' | relative_url }}) to continue
+   from learning examples into `fasm-mac` products.
+5. Use the handbook pages for concepts and the full reference pages for details.

@@ -9,13 +9,17 @@ permalink: /
   <p>This GitHub Pages site gives the repository a cleaner entry point than a single README and keeps the handbook content browsable online.</p>
 </div>
 
-## Native macOS FASM
+## Build Real macOS Tools With FASM
 
-This handbook is Linux/ELF64-first. For native macOS work, see
-[fasm-mac](https://github.com/kroq86/fasm-mac): a companion macOS x86_64 FASM
-port with Mach-O output, macOS syscall includes, kqueue/green-thread networking,
-and ready-to-run tools such as `httpmini`, `macdbg`, `machodoctor`, `logknife`,
-`fscan`, and `miniredis_server`.
+This handbook is the learning front door: CPU basics, Linux/ELF64 examples,
+algorithms, wrappers, and reference notes. When you want those ideas as
+installable macOS tools, follow the companion route into
+[fasm-mac](https://github.com/kroq86/fasm-mac): Mach-O output, Darwin syscall
+includes, kqueue servers, reusable core includes, release checks, Homebrew
+formulae, and finished tools such as `machodoctor`, `logknife`, `fscan`,
+`hexpeek`, `logbus`, `logvec`, and `macdbg`.
+
+<p><a href="{{ '/fasm-mac/' | relative_url }}">Open the macOS tools route</a></p>
 
 ## Choose Language
 
@@ -75,6 +79,7 @@ and ready-to-run tools such as `httpmini`, `macdbg`, `machodoctor`, `logknife`,
 ## Explore The Repository
 
 - [Example catalog]({{ '/examples/' | relative_url }})
+- [Build real macOS tools with FASM]({{ '/fasm-mac/' | relative_url }})
 - [Repository map]({{ '/repository-map/' | relative_url }})
 - [Full Reference Guide]({{ '/reference-guide/' | relative_url }})
 - [AI FASM Rules]({{ '/ai-fasm-rules/' | relative_url }})

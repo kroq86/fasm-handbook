@@ -9,6 +9,7 @@ permalink: /book-ru/
 ### Крупные разделы
 - [Часть 1: CPU + ASM (12 глав)](#part-1-core)
 - [Часть 2: FASM Reference](#part-2-fasm-reference)
+- [Реальные macOS-инструменты](#part-2b-real-macos-tools)
 - [Часть 3: Каталог примеров](#part-3-examples)
 - [Часть 4: Full Reference](#part-4-full-reference)
 - [Часть 5: AI FASM Rules](#part-5-ai-rules)
@@ -63,6 +64,7 @@ permalink: /book-ru/
   - [Глава 11: Сопрограммы и современное программирование](#глава-11)
   - [Глава 12: Объединяя всё вместе](#глава-12)
 - [Часть 2: FASM Reference Guide](#part-2-fasm-reference)
+- [Реальные macOS-инструменты на FASM](#part-2b-real-macos-tools)
 - [Часть 3: Каталог примеров](#part-3-examples)
 - [Часть 4: Полный Reference Guide](#part-4-full-reference)
 - [Часть 5: AI FASM Rules](#part-5-ai-rules)
@@ -3872,6 +3874,45 @@ read_loop:
 
 ---
 
+<a name="part-2b-real-macos-tools"></a>
+# Реальные macOS-инструменты На FASM
+
+Этот handbook остаётся Linux/ELF64-first, но практическое продолжение -
+[fasm-mac](https://github.com/kroq86/fasm-mac): macOS x86_64 FASM toolchain и
+product lab с Mach-O output, Darwin syscall includes, kqueue-серверами,
+reusable core includes, release checks и Homebrew formulae.
+
+Начинать лучше с отдельного маршрута:
+
+- [Реальные macOS-инструменты на FASM]({{ '/fasm-mac/' | relative_url }})
+
+Самый короткий macOS path:
+
+```sh
+brew tap kroq86/fasm-mac https://github.com/kroq86/fasm-mac
+brew install fasm-mac
+fasm run hello.asm
+```
+
+Минимальный исходник `hello.asm` приведён на отдельной route-странице.
+
+На Apple Silicon результатом будут x86_64 Mach-O binaries, запускаемые через
+Rosetta. `fasm-mac` не переписывает FASM classic: он сохраняет upstream compiler
+core, сначала получает ELF64, а затем конвертирует поддерживаемый layout в
+Mach-O, чтобы macOS мог запустить или слинковать результат.
+
+Используйте `fasm-mac` как следующий учебный слой:
+
+- читать `fasm/core` как растущую assembly stdlib: platform, files, strings,
+  scanners, hash maps, stacks, lists, trees, DP, coroutines, Mach-O parsing и C
+  ABI helpers;
+- изучать LeetCode-style examples через problem, memory layout, register
+  contract, core helper и runnable source;
+- переходить к product case studies: `machodoctor`, `fscan`, `logknife`,
+  `hexpeek`, `logbus`, `logvec` и advanced/experimental `macdbg`;
+- обращать внимание на release discipline: `scripts/check_*.sh`, `Formula/*.rb`
+  и `scripts/build-*-release.sh` превращают assembly-код в installable tools.
+
 
 ---
 
@@ -3905,6 +3946,22 @@ This page is the canonical map of executable and wrapper-based examples in the r
 | `hex_editor/` | practical binary inspection utility | `hex_editor.asm` |
 | `oop_game/` | OOP-style state model in FASM driven from Python | `game.asm`, `wrapper.c`, `game.py` |
 
+## macOS Tool Case Studies
+
+Canonical source этих apps живёт в
+[`fasm-mac`](https://github.com/kroq86/fasm-mac). Используйте их после Linux
+examples, когда нужны finished macOS tools, а не isolated demos.
+
+| Tool | Focus | Source |
+| --- | --- | --- |
+| `machodoctor` | Mach-O inspection and release checks | [`fasm/apps/machodoctor.asm`](https://github.com/kroq86/fasm-mac/blob/main/fasm/apps/machodoctor.asm) |
+| `fscan` | literal search over files | [`fasm/apps/fscan.asm`](https://github.com/kroq86/fasm-mac/blob/main/fasm/apps/fscan.asm) |
+| `logknife` | structured log slicing | [`fasm/apps/logknife.asm`](https://github.com/kroq86/fasm-mac/blob/main/fasm/apps/logknife.asm) |
+| `hexpeek` | compact file hex dump | [`fasm/apps/hexpeek.asm`](https://github.com/kroq86/fasm-mac/blob/main/fasm/apps/hexpeek.asm) |
+| `logbus` | durable append-only message broker with kqueue coroutines | [`fasm/apps/logbus.asm`](https://github.com/kroq86/fasm-mac/blob/main/fasm/apps/logbus.asm) |
+| `logvec` | FASM vector math with Zig index orchestration | [`docs/logvec.md`](https://github.com/kroq86/fasm-mac/blob/main/docs/logvec.md) |
+| `macdbg` | advanced AI-native LLDB snapshot debugger | [`fasm/apps/macdbg.asm`](https://github.com/kroq86/fasm-mac/blob/main/fasm/apps/macdbg.asm) |
+
 ## Core Support Files
 
 - `common.inc` for reusable macros and helper routines.
@@ -3917,7 +3974,9 @@ This page is the canonical map of executable and wrapper-based examples in the r
 1. Start with `fib.asm`, `arg.asm`, and `mycat.asm`.
 2. Move to `binary_search/`, `add/`, and `cadd/`.
 3. Continue with `coroutines/`, `vec/`, `hex_editor/`, and `oop_game/`.
-4. Use the handbook pages for concepts and the full reference pages for details.
+4. Use the [macOS tools route]({{ '/fasm-mac/' | relative_url }}) to continue
+   from learning examples into `fasm-mac` products.
+5. Use the handbook pages for concepts and the full reference pages for details.
 
 
 ---

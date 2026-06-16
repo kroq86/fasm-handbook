@@ -71,8 +71,11 @@
 
 .book-shell {
   display: grid;
-  grid-template-columns: 280px minmax(0, 1fr);
-  gap: 1.25rem;
+  width: min(1180px, calc(100vw - 2rem));
+  margin-left: 50%;
+  transform: translateX(-50%);
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 2rem;
   align-items: start;
 }
 
@@ -123,6 +126,9 @@
 
 @media screen and (max-width: 980px) {
   .book-shell {
+    width: auto;
+    margin-left: 0;
+    transform: none;
     grid-template-columns: 1fr;
   }
 

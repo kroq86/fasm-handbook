@@ -2,18 +2,22 @@
 
 A collection of FASM (Flat Assembler) examples, wrappers, utilities, and handbook material for x86_64 Linux.
 
-## Native macOS Companion
+## Build Real macOS Tools With FASM
 
-This handbook focuses on Linux/ELF64. If you want to build and run native FASM
-programs on macOS, see the companion project:
+This handbook is the human entry point for learning FASM: CPU basics,
+Linux/ELF64 patterns, algorithms, wrappers, and reference material. When you
+want those ideas as installable macOS developer tools, continue with the
+companion project:
 
-- [fasm-mac](https://github.com/kroq86/fasm-mac) — a macOS x86_64 FASM port with
-  reusable core includes and finished tools such as `httpmini`, `macdbg`,
-  `machodoctor`, `logknife`, `fscan`, `pathsum`, and `miniredis_server`.
+- [fasm-mac](https://github.com/kroq86/fasm-mac) — a macOS x86_64 FASM toolchain
+  and product lab with Mach-O output, reusable core includes, kqueue servers,
+  Homebrew formulae, and finished tools such as `machodoctor`, `logknife`,
+  `fscan`, `hexpeek`, `logbus`, `logvec`, and `macdbg`.
 
-Use this repository for learning the language and Linux syscall patterns; use
-`fasm-mac` when you want Mach-O output, macOS syscalls, kqueue sockets, and
-ready-to-run native examples.
+Use this repository to learn the language and low-level patterns. Use
+`fasm-mac` when you want Mach-O output, Darwin syscalls, release checks, and
+brew-worthy native tools. The guided bridge lives in
+[`docs/fasm-mac.md`](docs/fasm-mac.md).
 
 ## GitHub Pages
 
@@ -26,6 +30,7 @@ This repository now includes a `docs/` site for GitHub Pages.
 - Repository map: `docs/repository-map.md`
 - English handbook: `docs/book-en.md`
 - Russian handbook: `docs/book-ru.md`
+- Real macOS tools route: `docs/fasm-mac.md`
 - Full reference chapter: `docs/reference-guide-full.md`
 - AI rules chapter: `docs/ai-fasm-rules.md`
 
@@ -71,6 +76,7 @@ GitHub repository topics are set in the GitHub UI, not from files in the repo. R
 - Algorithm examples including two-sum and binary search.
 - Python and C wrapper experiments for assembly integration.
 - Advanced stateful interop examples such as `oop_game/`.
+- A bridge into `fasm-mac` for Mach-O output and finished macOS tools.
 - Reference material for learning FASM faster.
 
 ## Getting Started
@@ -154,6 +160,7 @@ Books are merged directly into:
 - [FASM Reference Guide](FASM_REFERENCE_GUIDE.md)
 - GitHub Pages handbook in `docs/`
 - [Example catalog](docs/examples.md)
+- [Build real macOS tools with FASM](docs/fasm-mac.md)
 
 ## Debugging
 
