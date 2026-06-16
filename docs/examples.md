@@ -11,7 +11,7 @@ This page is the canonical map of executable and wrapper-based examples in the r
 
 | Example | Focus | Files |
 | --- | --- | --- |
-| `examples/book/` | textbook examples with one canonical source path | `01_hello.asm`, `02_printing_text.asm`, `03_exit_codes.asm` |
+| `examples/book/` | textbook examples with one canonical source path | `01_what_is_a_program.asm`, `02_a_program_says_hello.asm`, `03_text_is_bytes.asm`, `04_cpu_remembers.asm`, `05_program_can_choose.asm` |
 | `mycat.asm` | file reading and writing | root |
 | `arg.asm` | command-line argument handling | root |
 | `fib.asm` | integer math and output | root |
@@ -56,7 +56,7 @@ examples when you want finished macOS tools rather than isolated demos.
 
 ## Suggested Reading Order
 
-1. Start with [FASM From Zero]({{ '/book/' | relative_url }}) and `examples/book/`.
+1. Start with [From Bytes To Programs]({{ '/book/' | relative_url }}) and `examples/book/`.
 2. Continue with `fib.asm`, `arg.asm`, and `mycat.asm`.
 3. Move to `binary_search/`, `add/`, and `cadd/`.
 4. Continue with `coroutines/`, `vec/`, `hex_editor/`, and `oop_game/`.

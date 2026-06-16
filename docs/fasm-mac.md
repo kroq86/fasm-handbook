@@ -5,9 +5,9 @@ permalink: /fasm-mac/
 
 # macOS Runtime
 
-The main textbook is [FASM From Zero]({{ '/book/' | relative_url }}). This page
-is only the macOS runtime companion: it shows how the same style of textbook
-programs run through [fasm-mac](https://github.com/kroq86/fasm-mac).
+The main textbook is [From Bytes To Programs]({{ '/book/' | relative_url }}).
+This page is only the macOS runtime companion: it shows how the same style of
+textbook programs run through [fasm-mac](https://github.com/kroq86/fasm-mac).
 
 The lesson source should stay single-path. When macOS differs, the textbook
 puts the difference under the program as a run note instead of duplicating the
@@ -127,7 +127,7 @@ people can install.
 
 # Реальные macOS-инструменты на FASM
 
-Главный учебник здесь: [FASM From Zero]({{ '/book/' | relative_url }}). Эта
+Главный учебник здесь: [From Bytes To Programs]({{ '/book/' | relative_url }}). Эта
 страница — только macOS runtime companion: как запускать тот же стиль учебных
 программ через [fasm-mac](https://github.com/kroq86/fasm-mac).
 

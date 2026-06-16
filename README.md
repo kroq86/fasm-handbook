@@ -1,19 +1,23 @@
-# FASM Handbook
+# From Bytes To Programs
 
-A practical FASM learning repository: textbook chapters, runnable examples,
-wrapper experiments, and reference material.
+A practical book for learning programming from the machine up with FASM.
 
-## FASM From Zero
+## From Bytes To Programs
 
-The main reader path is [FASM From Zero](docs/book/index.md): one complete
-program per chapter, line-by-line explanations, exercises, and short platform
-run notes under the same source listing.
+Most courses start with Python. This one starts with what Python stands on:
+bytes, memory, CPU instructions, and the operating system.
+
+The main reader path is [From Bytes To Programs](docs/book/index.md): one
+machine-level idea per chapter, one runnable FASM program, diagrams, exercises,
+and short platform run notes under the same source listing.
 
 The first textbook examples live in `examples/book/`:
 
-- `01_hello.asm`
-- `02_printing_text.asm`
-- `03_exit_codes.asm`
+- `01_what_is_a_program.asm`
+- `02_a_program_says_hello.asm`
+- `03_text_is_bytes.asm`
+- `04_cpu_remembers.asm`
+- `05_program_can_choose.asm`
 
 ## macOS Companion
 
@@ -158,7 +162,7 @@ Books are merged directly into:
 - [AI FASM Rules](AI_FASM_RULES.md)
 - [FASM Reference Guide](FASM_REFERENCE_GUIDE.md)
 - GitHub Pages handbook in `docs/`
-- [FASM From Zero](docs/book/index.md)
+- [From Bytes To Programs](docs/book/index.md)
 - [Example catalog](docs/examples.md)
 - [macOS runtime notes](docs/fasm-mac.md)
 

@@ -4,21 +4,21 @@ permalink: /
 ---
 
 <div class="hero">
-  <h1>FASM Handbook</h1>
-  <p>A practical textbook for learning Flat Assembler by building real command-line programs.</p>
-  <p>Start with one source file, one idea, and one runnable program. Linux and macOS notes stay under the same code instead of splitting the book in two.</p>
-  <p><a class="primary-cta" href="{{ '/book/' | relative_url }}">Start FASM From Zero</a></p>
+  <h1>Learn Programming From The Machine Up</h1>
+  <p>Most courses start with Python. This one starts with what Python stands on: bytes, memory, CPU instructions, and the operating system.</p>
+  <p>FASM is the microscope. The goal is to understand what programs really do.</p>
+  <p><a class="primary-cta" href="{{ '/book/' | relative_url }}">Start From Bytes To Programs</a></p>
 </div>
 
 ## What To Click First
 
-Click **Start FASM From Zero**. That is the textbook. Everything else is
+Click **Start From Bytes To Programs**. That is the textbook. Everything else is
 supporting material.
 
 <div class="path-grid">
   <div class="path-card path-card-main">
-    <h3>1. Learn FASM</h3>
-    <p>The main book: one complete program per chapter, line-by-line explanations, mistakes, exercises, and run notes.</p>
+    <h3>1. Learn What Programs Do</h3>
+    <p>The main book: one machine-level idea per chapter, one runnable FASM program, diagrams, exercises, and C/Python connections.</p>
     <p><a href="{{ '/book/' | relative_url }}">Open the textbook</a></p>
   </div>
   <div class="path-card">
@@ -36,9 +36,11 @@ supporting material.
 ## Current Textbook Chapters
 
 - [Preface: What This Book Is]({{ '/book/preface/' | relative_url }})
-- [Chapter 1: Hello, FASM]({{ '/book/hello-fasm/' | relative_url }})
-- [Chapter 2: Printing Text]({{ '/book/printing-text/' | relative_url }})
-- [Chapter 3: Exit Codes And Errors]({{ '/book/exit-codes-and-errors/' | relative_url }})
+- [Chapter 1: What Is A Program?]({{ '/book/what-is-a-program/' | relative_url }})
+- [Chapter 2: A Program Says Hello]({{ '/book/a-program-says-hello/' | relative_url }})
+- [Chapter 3: Text Is Bytes]({{ '/book/text-is-bytes/' | relative_url }})
+- [Chapter 4: The CPU Remembers Things]({{ '/book/the-cpu-remembers-things/' | relative_url }})
+- [Chapter 5: A Program Can Choose]({{ '/book/a-program-can-choose/' | relative_url }})
 
 ## Secondary Material
 

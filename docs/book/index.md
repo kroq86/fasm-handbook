@@ -1,28 +1,38 @@
 ---
-title: FASM From Zero
+title: From Bytes To Programs
 permalink: /book/
 ---
 
-# FASM From Zero
-## Build Real Programs in Assembly
+# From Bytes To Programs
+## Learn What Programs Really Do With FASM
 
-This is the textbook path. It teaches one idea at a time, with one canonical
-FASM program per lesson. Platform details stay in short notes under the program:
-the lesson is the same, while Linux and macOS differ only in the OS contract and
-the command used to run the code.
+Most courses start with Python. This one starts with what Python stands on:
+bytes, memory, CPU instructions, and the operating system.
+
+FASM is the microscope. The subject is programming from the machine up.
 
 ## Start Here
 
 1. [Preface: What This Book Is]({{ '/book/preface/' | relative_url }})
-2. [Chapter 1: Hello, FASM]({{ '/book/hello-fasm/' | relative_url }})
-3. [Chapter 2: Printing Text]({{ '/book/printing-text/' | relative_url }})
-4. [Chapter 3: Exit Codes And Errors]({{ '/book/exit-codes-and-errors/' | relative_url }})
+2. [Chapter 1: What Is A Program?]({{ '/book/what-is-a-program/' | relative_url }})
+3. [Chapter 2: A Program Says Hello]({{ '/book/a-program-says-hello/' | relative_url }})
+4. [Chapter 3: Text Is Bytes]({{ '/book/text-is-bytes/' | relative_url }})
+5. [Chapter 4: The CPU Remembers Things]({{ '/book/the-cpu-remembers-things/' | relative_url }})
+6. [Chapter 5: A Program Can Choose]({{ '/book/a-program-can-choose/' | relative_url }})
+
+## Learning Ladder
+
+- A file can be an executable program.
+- Text is bytes in memory.
+- The CPU starts at an entry point.
+- Registers remember tiny values.
+- Comparisons and jumps let programs choose.
+- Later chapters connect those ideas to C and Python.
 
 ## The Rule
 
-Each chapter uses one main source listing. If macOS needs a different command,
-or Linux needs an include path, the difference is explained after the code. The
-reader should not have to learn two separate books.
+Each chapter uses one main source listing. Platform differences are short run
+notes under the same program, not separate Linux and macOS lessons.
 
 ## Companion Material
 
