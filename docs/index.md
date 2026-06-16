@@ -38,32 +38,6 @@ formulae, and finished tools such as `machodoctor`, `logknife`, `fscan`,
   </div>
 </div>
 
-## Recommended Publishing Strategy
-
-- Use English as the main public landing language on GitHub.
-- Keep Russian as a parallel handbook version for readability and teaching.
-- Treat the repository README as the short project entry and GitHub Pages as the full handbook.
-
-<div class="topic-box">
-  <h2>Recommended GitHub Topics</h2>
-  <ul class="topic-list">
-    <li>fasm</li>
-    <li>flat-assembler</li>
-    <li>assembly</li>
-    <li>x86-64</li>
-    <li>linux</li>
-    <li>elf64</li>
-    <li>macos</li>
-    <li>mach-o</li>
-    <li>systems-programming</li>
-    <li>low-level-programming</li>
-    <li>assembler</li>
-    <li>algorithms</li>
-    <li>simd</li>
-    <li>coroutines</li>
-  </ul>
-</div>
-
 ## What Is In The Repository
 
 - Core include files for Linux syscalls and shared macros.
@@ -83,7 +57,3 @@ formulae, and finished tools such as `machodoctor`, `logknife`, `fscan`,
 - [Repository map]({{ '/repository-map/' | relative_url }})
 - [Full Reference Guide]({{ '/reference-guide/' | relative_url }})
 - [AI FASM Rules]({{ '/ai-fasm-rules/' | relative_url }})
-
-<div class="note-box">
-  <strong>GitHub Pages setup:</strong> in repository settings, set Pages to deploy from the <code>docs/</code> folder on the default branch.
-</div>
